@@ -24,7 +24,8 @@ repos:
     rev: v5.0.6
     hooks:
       - id: ansible-lint
-        files: \.(yaml|yml)$
+        files: ^ansible/
+        types: [yaml]
         exclude: ./roles
 
   - repo: https://github.com/IamTheFij/ansible-pre-commit.git
@@ -36,6 +37,7 @@ repos:
     rev: v0.27.1
     hooks:
       - id: markdownlint
+        types: [markdown]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook.git
     rev: "v4.1.0"
